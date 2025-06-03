@@ -1,0 +1,34 @@
+username,password,email,expected
+john123,Abcd123!,john@example.com,true
+,Abcd123!,missing@example.com,false
+bob123,Password1!,bobmail.com,false
+carol,Abcd123!,carol@domain.com,true
+user2,123,user2@example.com,false
+user3,Pass5678!,user3@example,false
+user4,passabcd,user4@example.com,false
+user5,,user5@example.com,false
+user6,Pass1234!,user6example.com,false
+user7,Abcd123!,user7@domain.com,true
+user8,NOLOWER1!,user8@example.com,false
+user9,noupper1!,user9@example.com,false
+user10,NoSpecial1,user10@example.com,false
+user11,Valid123!,user11@example.com,true
+user12,Valid123!,user12@company.com,true
+user13,Valid123!,null,false
+null,Valid123!,null,false
+username,password,email,expected
+,Abcd123!,john@example.com,false                      # username rỗng
+alice,,alice@example.com,false                         # password rỗng (null hoặc rỗng)
+bob,short1!,bob@example.com,false                       # password quá ngắn (< 8)
+carol,nouppercase1!,carol@example.com,false             # password không có chữ hoa
+dave,NOLOWERCASE1!,dave@example.com,false               # password không có chữ thường
+eve,NoSpecialChar1,eve@example.com,false                # password không có ký tự đặc biệt
+frank,StrongPass1!,invalidemail,false                   # email sai định dạng
+grace,StrongPass2!,grace@example,false                  # email thiếu domain hợp lệ
+heidi,StrongPass3!,heidiexample.com,false                # email thiếu @
+ivan,StrongPass4!,ivan@.com,false                        # email có định dạng sai
+judy,StrongPass5!,null,false                             # email null
+ken,StrongPass6!,ken@example.com,true                   # valid case thành công
+leo,StrongPass7!,leo@example.com,true                   # valid case thành công
+max,StrongPass8!,max@example.com,true                   # valid case thành công
+nancy,StrongPass9!,nancy@example.com,false              # test đăng ký trùng username (xem test riêng)

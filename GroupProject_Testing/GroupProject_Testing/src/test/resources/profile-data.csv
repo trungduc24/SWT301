@@ -1,0 +1,3 @@
+imagePath,expectedResult
+sample-image.jpg,success
+invalid-image.xyz,failure

@@ -1,0 +1,7 @@
+action,oldCourseName,newCourseName,expectedResult
+add,,Java 101,success
+add,,Python 101,success
+edit,Java 101,Java Advanced,success
+edit,NonExistent,Edited Name,failure
+delete,Python 101,,success
+delete,NonExistent,,failure

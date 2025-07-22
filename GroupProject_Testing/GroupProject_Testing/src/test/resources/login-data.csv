@@ -1,0 +1,8 @@
+username,password,expectedResult
+validUser,validPass,success
+invalidUser,validPass,failure
+validUser,invalidPass,failure
+invalidUser,invalidPass,failure
+emptyUser,validPass,failure
+validUser,emptyPass,failure
+emptyUser,emptyPass,failure
